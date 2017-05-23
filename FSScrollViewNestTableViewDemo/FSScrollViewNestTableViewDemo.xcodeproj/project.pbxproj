@@ -1,0 +1,524 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6EF8357D651B5D6262B3223C /* libPods-FSScrollViewNestTableViewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 083B5C8FA1417C2E90A8B9C3 /* libPods-FSScrollViewNestTableViewDemo.a */; };
+		A3CF4C691ED40F48000EF45B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A3CF4C681ED40F48000EF45B /* main.m */; };
+		A3CF4C6C1ED40F48000EF45B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3CF4C6B1ED40F48000EF45B /* AppDelegate.m */; };
+		A3CF4C721ED40F48000EF45B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3CF4C701ED40F48000EF45B /* Main.storyboard */; };
+		A3CF4C741ED40F48000EF45B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3CF4C731ED40F48000EF45B /* Assets.xcassets */; };
+		A3CF4C771ED40F48000EF45B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3CF4C751ED40F48000EF45B /* LaunchScreen.storyboard */; };
+		A3CF4C8D1ED41B87000EF45B /* FSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3CF4C891ED41B87000EF45B /* FSBaseViewController.m */; };
+		A3CF4C8E1ED41B87000EF45B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3CF4C8B1ED41B87000EF45B /* ViewController.m */; };
+		A3CF4C911ED41BC7000EF45B /* FSBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3CF4C901ED41BC7000EF45B /* FSBaseTableView.m */; };
+		A3CF4C941ED41CC0000EF45B /* FSBaseTopTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3CF4C931ED41CC0000EF45B /* FSBaseTopTableViewCell.m */; };
+		A3CF4C9B1ED4217D000EF45B /* FSPageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3CF4C971ED4217D000EF45B /* FSPageContentView.m */; };
+		A3CF4C9C1ED4217D000EF45B /* FSSegmentTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3CF4C9A1ED4217D000EF45B /* FSSegmentTitleView.m */; };
+		A3CF4CA21ED421B8000EF45B /* FSLoopScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3CF4C9F1ED421B8000EF45B /* FSLoopScrollView.m */; };
+		A3CF4CA31ED421B8000EF45B /* NSTimer+FSLoop.m in Sources */ = {isa = PBXBuildFile; fileRef = A3CF4CA11ED421B8000EF45B /* NSTimer+FSLoop.m */; };
+		A3CF4CA61ED4323D000EF45B /* FSBaselineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3CF4CA51ED4323D000EF45B /* FSBaselineTableViewCell.m */; };
+		A3CF4CAA1ED43361000EF45B /* home_ic_hot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3CF4CA81ED43361000EF45B /* home_ic_hot@2x.png */; };
+		A3CF4CAB1ED43361000EF45B /* home_ic_new@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3CF4CA91ED43361000EF45B /* home_ic_new@2x.png */; };
+		A3CF4CAE1ED436FC000EF45B /* FSBottomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3CF4CAD1ED436FC000EF45B /* FSBottomTableViewCell.m */; };
+		A3CF4CB11ED43DBD000EF45B /* FSScrollContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3CF4CB01ED43DBD000EF45B /* FSScrollContentViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		083B5C8FA1417C2E90A8B9C3 /* libPods-FSScrollViewNestTableViewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FSScrollViewNestTableViewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E237653D67A3AA61980B85C /* Pods-FSScrollViewNestTableViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSScrollViewNestTableViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-FSScrollViewNestTableViewDemo/Pods-FSScrollViewNestTableViewDemo.release.xcconfig"; sourceTree = "<group>"; };
+		792929200D0451EEFEE19192 /* Pods-FSScrollViewNestTableViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSScrollViewNestTableViewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FSScrollViewNestTableViewDemo/Pods-FSScrollViewNestTableViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		A3CF4C641ED40F48000EF45B /* FSScrollViewNestTableViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FSScrollViewNestTableViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3CF4C681ED40F48000EF45B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A3CF4C6A1ED40F48000EF45B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A3CF4C6B1ED40F48000EF45B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A3CF4C711ED40F48000EF45B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A3CF4C731ED40F48000EF45B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A3CF4C761ED40F48000EF45B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A3CF4C781ED40F48000EF45B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3CF4C881ED41B87000EF45B /* FSBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSBaseViewController.h; sourceTree = "<group>"; };
+		A3CF4C891ED41B87000EF45B /* FSBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSBaseViewController.m; sourceTree = "<group>"; };
+		A3CF4C8A1ED41B87000EF45B /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A3CF4C8B1ED41B87000EF45B /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A3CF4C8F1ED41BC7000EF45B /* FSBaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSBaseTableView.h; sourceTree = "<group>"; };
+		A3CF4C901ED41BC7000EF45B /* FSBaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSBaseTableView.m; sourceTree = "<group>"; };
+		A3CF4C921ED41CC0000EF45B /* FSBaseTopTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSBaseTopTableViewCell.h; sourceTree = "<group>"; };
+		A3CF4C931ED41CC0000EF45B /* FSBaseTopTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSBaseTopTableViewCell.m; sourceTree = "<group>"; };
+		A3CF4C961ED4217D000EF45B /* FSPageContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPageContentView.h; sourceTree = "<group>"; };
+		A3CF4C971ED4217D000EF45B /* FSPageContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSPageContentView.m; sourceTree = "<group>"; };
+		A3CF4C981ED4217D000EF45B /* FSScrollContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSScrollContentView.h; sourceTree = "<group>"; };
+		A3CF4C991ED4217D000EF45B /* FSSegmentTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSegmentTitleView.h; sourceTree = "<group>"; };
+		A3CF4C9A1ED4217D000EF45B /* FSSegmentTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSegmentTitleView.m; sourceTree = "<group>"; };
+		A3CF4C9E1ED421B8000EF45B /* FSLoopScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSLoopScrollView.h; sourceTree = "<group>"; };
+		A3CF4C9F1ED421B8000EF45B /* FSLoopScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSLoopScrollView.m; sourceTree = "<group>"; };
+		A3CF4CA01ED421B8000EF45B /* NSTimer+FSLoop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+FSLoop.h"; sourceTree = "<group>"; };
+		A3CF4CA11ED421B8000EF45B /* NSTimer+FSLoop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+FSLoop.m"; sourceTree = "<group>"; };
+		A3CF4CA41ED4323D000EF45B /* FSBaselineTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSBaselineTableViewCell.h; sourceTree = "<group>"; };
+		A3CF4CA51ED4323D000EF45B /* FSBaselineTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSBaselineTableViewCell.m; sourceTree = "<group>"; };
+		A3CF4CA71ED432A3000EF45B /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		A3CF4CA81ED43361000EF45B /* home_ic_hot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_ic_hot@2x.png"; sourceTree = "<group>"; };
+		A3CF4CA91ED43361000EF45B /* home_ic_new@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_ic_new@2x.png"; sourceTree = "<group>"; };
+		A3CF4CAC1ED436FC000EF45B /* FSBottomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSBottomTableViewCell.h; sourceTree = "<group>"; };
+		A3CF4CAD1ED436FC000EF45B /* FSBottomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSBottomTableViewCell.m; sourceTree = "<group>"; };
+		A3CF4CAF1ED43DBD000EF45B /* FSScrollContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSScrollContentViewController.h; sourceTree = "<group>"; };
+		A3CF4CB01ED43DBD000EF45B /* FSScrollContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSScrollContentViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A3CF4C611ED40F48000EF45B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EF8357D651B5D6262B3223C /* libPods-FSScrollViewNestTableViewDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		22A5AFBE323A632D6D306A5C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				083B5C8FA1417C2E90A8B9C3 /* libPods-FSScrollViewNestTableViewDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6C732E7B455EFED7D5D1B9BB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				792929200D0451EEFEE19192 /* Pods-FSScrollViewNestTableViewDemo.debug.xcconfig */,
+				3E237653D67A3AA61980B85C /* Pods-FSScrollViewNestTableViewDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A3CF4C5B1ED40F48000EF45B = {
+			isa = PBXGroup;
+			children = (
+				A3CF4CA81ED43361000EF45B /* home_ic_hot@2x.png */,
+				A3CF4CA91ED43361000EF45B /* home_ic_new@2x.png */,
+				A3CF4CA71ED432A3000EF45B /* PrefixHeader.pch */,
+				A3CF4C661ED40F48000EF45B /* FSScrollViewNestTableViewDemo */,
+				A3CF4C651ED40F48000EF45B /* Products */,
+				6C732E7B455EFED7D5D1B9BB /* Pods */,
+				22A5AFBE323A632D6D306A5C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A3CF4C651ED40F48000EF45B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A3CF4C641ED40F48000EF45B /* FSScrollViewNestTableViewDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A3CF4C661ED40F48000EF45B /* FSScrollViewNestTableViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				A3CF4C851ED41B87000EF45B /* Lib */,
+				A3CF4C861ED41B87000EF45B /* Model */,
+				A3CF4C871ED41B87000EF45B /* ViewController */,
+				A3CF4C8C1ED41B87000EF45B /* Views */,
+				A3CF4C6A1ED40F48000EF45B /* AppDelegate.h */,
+				A3CF4C6B1ED40F48000EF45B /* AppDelegate.m */,
+				A3CF4C701ED40F48000EF45B /* Main.storyboard */,
+				A3CF4C731ED40F48000EF45B /* Assets.xcassets */,
+				A3CF4C751ED40F48000EF45B /* LaunchScreen.storyboard */,
+				A3CF4C781ED40F48000EF45B /* Info.plist */,
+				A3CF4C671ED40F48000EF45B /* Supporting Files */,
+			);
+			path = FSScrollViewNestTableViewDemo;
+			sourceTree = "<group>";
+		};
+		A3CF4C671ED40F48000EF45B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A3CF4C681ED40F48000EF45B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A3CF4C851ED41B87000EF45B /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				A3CF4C9D1ED421B8000EF45B /* FSLoopScrollView */,
+				A3CF4C951ED4217D000EF45B /* FSScrollContentViewLib */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		A3CF4C861ED41B87000EF45B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A3CF4C871ED41B87000EF45B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A3CF4C8A1ED41B87000EF45B /* ViewController.h */,
+				A3CF4C8B1ED41B87000EF45B /* ViewController.m */,
+				A3CF4C8F1ED41BC7000EF45B /* FSBaseTableView.h */,
+				A3CF4C901ED41BC7000EF45B /* FSBaseTableView.m */,
+				A3CF4C881ED41B87000EF45B /* FSBaseViewController.h */,
+				A3CF4C891ED41B87000EF45B /* FSBaseViewController.m */,
+				A3CF4CAF1ED43DBD000EF45B /* FSScrollContentViewController.h */,
+				A3CF4CB01ED43DBD000EF45B /* FSScrollContentViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A3CF4C8C1ED41B87000EF45B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A3CF4C921ED41CC0000EF45B /* FSBaseTopTableViewCell.h */,
+				A3CF4C931ED41CC0000EF45B /* FSBaseTopTableViewCell.m */,
+				A3CF4CA41ED4323D000EF45B /* FSBaselineTableViewCell.h */,
+				A3CF4CA51ED4323D000EF45B /* FSBaselineTableViewCell.m */,
+				A3CF4CAC1ED436FC000EF45B /* FSBottomTableViewCell.h */,
+				A3CF4CAD1ED436FC000EF45B /* FSBottomTableViewCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A3CF4C951ED4217D000EF45B /* FSScrollContentViewLib */ = {
+			isa = PBXGroup;
+			children = (
+				A3CF4C961ED4217D000EF45B /* FSPageContentView.h */,
+				A3CF4C971ED4217D000EF45B /* FSPageContentView.m */,
+				A3CF4C981ED4217D000EF45B /* FSScrollContentView.h */,
+				A3CF4C991ED4217D000EF45B /* FSSegmentTitleView.h */,
+				A3CF4C9A1ED4217D000EF45B /* FSSegmentTitleView.m */,
+			);
+			path = FSScrollContentViewLib;
+			sourceTree = "<group>";
+		};
+		A3CF4C9D1ED421B8000EF45B /* FSLoopScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				A3CF4C9E1ED421B8000EF45B /* FSLoopScrollView.h */,
+				A3CF4C9F1ED421B8000EF45B /* FSLoopScrollView.m */,
+				A3CF4CA01ED421B8000EF45B /* NSTimer+FSLoop.h */,
+				A3CF4CA11ED421B8000EF45B /* NSTimer+FSLoop.m */,
+			);
+			path = FSLoopScrollView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A3CF4C631ED40F48000EF45B /* FSScrollViewNestTableViewDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3CF4C7B1ED40F48000EF45B /* Build configuration list for PBXNativeTarget "FSScrollViewNestTableViewDemo" */;
+			buildPhases = (
+				272AE58165692512D31B2280 /* [CP] Check Pods Manifest.lock */,
+				A3CF4C601ED40F48000EF45B /* Sources */,
+				A3CF4C611ED40F48000EF45B /* Frameworks */,
+				A3CF4C621ED40F48000EF45B /* Resources */,
+				072D5CAB44A0BE26BBCEB375 /* [CP] Embed Pods Frameworks */,
+				82D50CB4948BD5E928168CBC /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FSScrollViewNestTableViewDemo;
+			productName = FSScrollViewNestTableViewDemo;
+			productReference = A3CF4C641ED40F48000EF45B /* FSScrollViewNestTableViewDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A3CF4C5C1ED40F48000EF45B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = FS;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = fengshun;
+				TargetAttributes = {
+					A3CF4C631ED40F48000EF45B = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = PFKU76D5EU;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A3CF4C5F1ED40F48000EF45B /* Build configuration list for PBXProject "FSScrollViewNestTableViewDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A3CF4C5B1ED40F48000EF45B;
+			productRefGroup = A3CF4C651ED40F48000EF45B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A3CF4C631ED40F48000EF45B /* FSScrollViewNestTableViewDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A3CF4C621ED40F48000EF45B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3CF4C771ED40F48000EF45B /* LaunchScreen.storyboard in Resources */,
+				A3CF4CAA1ED43361000EF45B /* home_ic_hot@2x.png in Resources */,
+				A3CF4C741ED40F48000EF45B /* Assets.xcassets in Resources */,
+				A3CF4CAB1ED43361000EF45B /* home_ic_new@2x.png in Resources */,
+				A3CF4C721ED40F48000EF45B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		072D5CAB44A0BE26BBCEB375 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FSScrollViewNestTableViewDemo/Pods-FSScrollViewNestTableViewDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		272AE58165692512D31B2280 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		82D50CB4948BD5E928168CBC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FSScrollViewNestTableViewDemo/Pods-FSScrollViewNestTableViewDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A3CF4C601ED40F48000EF45B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3CF4C9C1ED4217D000EF45B /* FSSegmentTitleView.m in Sources */,
+				A3CF4CB11ED43DBD000EF45B /* FSScrollContentViewController.m in Sources */,
+				A3CF4C911ED41BC7000EF45B /* FSBaseTableView.m in Sources */,
+				A3CF4C9B1ED4217D000EF45B /* FSPageContentView.m in Sources */,
+				A3CF4CA61ED4323D000EF45B /* FSBaselineTableViewCell.m in Sources */,
+				A3CF4CA21ED421B8000EF45B /* FSLoopScrollView.m in Sources */,
+				A3CF4C6C1ED40F48000EF45B /* AppDelegate.m in Sources */,
+				A3CF4C8D1ED41B87000EF45B /* FSBaseViewController.m in Sources */,
+				A3CF4CAE1ED436FC000EF45B /* FSBottomTableViewCell.m in Sources */,
+				A3CF4C8E1ED41B87000EF45B /* ViewController.m in Sources */,
+				A3CF4CA31ED421B8000EF45B /* NSTimer+FSLoop.m in Sources */,
+				A3CF4C691ED40F48000EF45B /* main.m in Sources */,
+				A3CF4C941ED41CC0000EF45B /* FSBaseTopTableViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A3CF4C701ED40F48000EF45B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3CF4C711ED40F48000EF45B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A3CF4C751ED40F48000EF45B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3CF4C761ED40F48000EF45B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A3CF4C791ED40F48000EF45B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A3CF4C7A1ED40F48000EF45B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A3CF4C7C1ED40F48000EF45B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 792929200D0451EEFEE19192 /* Pods-FSScrollViewNestTableViewDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PFKU76D5EU;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PREFIX_HEADER = /Users/huim/Desktop/FSScrollViewNestTableViewDemo/PrefixHeader.pch;
+				INFOPLIST_FILE = FSScrollViewNestTableViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.huim.FSScrollViewNestTableViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A3CF4C7D1ED40F48000EF45B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E237653D67A3AA61980B85C /* Pods-FSScrollViewNestTableViewDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PFKU76D5EU;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PREFIX_HEADER = /Users/huim/Desktop/FSScrollViewNestTableViewDemo/PrefixHeader.pch;
+				INFOPLIST_FILE = FSScrollViewNestTableViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.huim.FSScrollViewNestTableViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A3CF4C5F1ED40F48000EF45B /* Build configuration list for PBXProject "FSScrollViewNestTableViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3CF4C791ED40F48000EF45B /* Debug */,
+				A3CF4C7A1ED40F48000EF45B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A3CF4C7B1ED40F48000EF45B /* Build configuration list for PBXNativeTarget "FSScrollViewNestTableViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3CF4C7C1ED40F48000EF45B /* Debug */,
+				A3CF4C7D1ED40F48000EF45B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A3CF4C5C1ED40F48000EF45B /* Project object */;
+}
