@@ -1,18 +1,17 @@
 //
-//  PrefixHeader.pch
+//  FSScrollViewNestTableViewDemo-Prefix.pch
 //  FSScrollViewNestTableViewDemo
 //
-//  Created by huim on 2017/5/23.
+//  Created by 冯顺 on 2017/5/23.
 //  Copyright © 2017年 fengshun. All rights reserved.
 //
 
-#ifndef PrefixHeader_pch
-#define PrefixHeader_pch
+#ifndef FSScrollViewNestTableViewDemo_Prefix_pch
+#define FSScrollViewNestTableViewDemo_Prefix_pch
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
-#endif /* PrefixHeader_pch */
-
+#endif /* FSScrollViewNestTableViewDemo_Prefix_pch */
 #define KSCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define KSCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height

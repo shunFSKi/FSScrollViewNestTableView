@@ -59,13 +59,13 @@
 		A3CF4CA11ED421B8000EF45B /* NSTimer+FSLoop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+FSLoop.m"; sourceTree = "<group>"; };
 		A3CF4CA41ED4323D000EF45B /* FSBaselineTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSBaselineTableViewCell.h; sourceTree = "<group>"; };
 		A3CF4CA51ED4323D000EF45B /* FSBaselineTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSBaselineTableViewCell.m; sourceTree = "<group>"; };
-		A3CF4CA71ED432A3000EF45B /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		A3CF4CA81ED43361000EF45B /* home_ic_hot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_ic_hot@2x.png"; sourceTree = "<group>"; };
 		A3CF4CA91ED43361000EF45B /* home_ic_new@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_ic_new@2x.png"; sourceTree = "<group>"; };
 		A3CF4CAC1ED436FC000EF45B /* FSBottomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSBottomTableViewCell.h; sourceTree = "<group>"; };
 		A3CF4CAD1ED436FC000EF45B /* FSBottomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSBottomTableViewCell.m; sourceTree = "<group>"; };
 		A3CF4CAF1ED43DBD000EF45B /* FSScrollContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSScrollContentViewController.h; sourceTree = "<group>"; };
 		A3CF4CB01ED43DBD000EF45B /* FSScrollContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSScrollContentViewController.m; sourceTree = "<group>"; };
+		F0D43D0A1ED4813D003F23F7 /* FSScrollViewNestTableViewDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FSScrollViewNestTableViewDemo-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +102,6 @@
 			children = (
 				A3CF4CA81ED43361000EF45B /* home_ic_hot@2x.png */,
 				A3CF4CA91ED43361000EF45B /* home_ic_new@2x.png */,
-				A3CF4CA71ED432A3000EF45B /* PrefixHeader.pch */,
 				A3CF4C661ED40F48000EF45B /* FSScrollViewNestTableViewDemo */,
 				A3CF4C651ED40F48000EF45B /* Products */,
 				6C732E7B455EFED7D5D1B9BB /* Pods */,
@@ -140,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				A3CF4C681ED40F48000EF45B /* main.m */,
+				F0D43D0A1ED4813D003F23F7 /* FSScrollViewNestTableViewDemo-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -472,7 +472,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PFKU76D5EU;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
-				GCC_PREFIX_HEADER = /Users/huim/Desktop/FSScrollViewNestTableViewDemo/PrefixHeader.pch;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FSScrollViewNestTableViewDemo/FSScrollViewNestTableViewDemo-Prefix.pch";
 				INFOPLIST_FILE = FSScrollViewNestTableViewDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -488,7 +489,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PFKU76D5EU;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
-				GCC_PREFIX_HEADER = /Users/huim/Desktop/FSScrollViewNestTableViewDemo/PrefixHeader.pch;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FSScrollViewNestTableViewDemo/FSScrollViewNestTableViewDemo-Prefix.pch";
 				INFOPLIST_FILE = FSScrollViewNestTableViewDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

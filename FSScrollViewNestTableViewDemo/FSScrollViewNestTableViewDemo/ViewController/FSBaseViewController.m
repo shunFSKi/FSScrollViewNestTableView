@@ -17,6 +17,7 @@
 @interface FSBaseViewController ()<UITableViewDelegate,UITableViewDataSource,FSPageContentViewDelegate,FSSegmentTitleViewDelegate>
 @property (nonatomic, strong) FSBaseTableView *tableView;
 @property (nonatomic, strong) FSBottomTableViewCell *contentCell;
+@property (nonatomic, strong) FSSegmentTitleView *titleView;
 @end
 
 @implementation FSBaseViewController
@@ -68,8 +69,9 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    FSSegmentTitleView *titleView = [[FSSegmentTitleView alloc]initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 50) titles:@[@"全部",@"服饰穿搭",@"生活百货",@"美食吃货",@"美容护理",@"母婴儿童",@"数码家电"] delegate:self indicatorType:FSIndicatorTypeEqualTitle];
-    return titleView;
+    self.titleView = [[FSSegmentTitleView alloc]initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 50) titles:@[@"全部",@"服饰穿搭",@"生活百货",@"美食吃货",@"美容护理",@"母婴儿童",@"数码家电"] delegate:self indicatorType:FSIndicatorTypeEqualTitle];
+    self.titleView.backgroundColor = [UIColor lightGrayColor];
+    return self.titleView;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -111,7 +113,12 @@
 #pragma mark FSSegmentTitleViewDelegate
 - (void)FSContenViewDidEndDecelerating:(FSPageContentView *)contentView startIndex:(NSInteger)startIndex endIndex:(NSInteger)endIndex
 {
-    
+    self.titleView.selectIndex = endIndex;
+}
+
+- (void)FSSegmentTitleView:(FSSegmentTitleView *)titleView startIndex:(NSInteger)startIndex endIndex:(NSInteger)endIndex
+{
+    self.contentCell.pageContentView.contentViewCurrentIndex = endIndex;
 }
 
 #pragma mark LazyLoad
