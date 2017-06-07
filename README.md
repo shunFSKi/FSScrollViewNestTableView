@@ -3,3 +3,5 @@
 demo中还用到了本人封装的框架[FSLoopScrollView](https://github.com/shunFSKi/FSLoopScrollView)和[FSScrollViewNestTableView](https://github.com/shunFSKi/FSScrollViewNestTableView)
 
 demo下载下来运行出错后 执行 pod install,再出错执行 pod setup
+
+![效果图](https://github.com/shunFSKi/ImageResources/blob/master/FSScrollViewNestTableView.gif)
