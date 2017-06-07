@@ -45,7 +45,7 @@
 }
 
 #pragma mark notify
-- (void)changeScrollStatus
+- (void)changeScrollStatus//改变主视图的状态
 {
     self.canScroll = YES;
     self.contentCell.cellCanScroll = NO;
