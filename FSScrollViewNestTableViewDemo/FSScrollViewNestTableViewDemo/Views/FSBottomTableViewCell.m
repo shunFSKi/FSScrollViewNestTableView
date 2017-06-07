@@ -19,4 +19,22 @@
     }
     return self;
 }
+
+#pragma mark Setter
+- (void)setViewControllers:(NSMutableArray *)viewControllers
+{
+    _viewControllers = viewControllers;
+}
+
+- (void)setCellCanScroll:(BOOL)cellCanScroll
+{
+    _cellCanScroll = cellCanScroll;
+    
+    for (FSScrollContentViewController *VC in _viewControllers) {
+        VC.vcCanScroll = cellCanScroll;
+        if (!cellCanScroll) {//如果cell不能滑动，代表到了顶部，修改所有子vc的状态回到顶部
+            VC.tableView.contentOffset = CGPointZero;
+        }
+    }
+}
 @end

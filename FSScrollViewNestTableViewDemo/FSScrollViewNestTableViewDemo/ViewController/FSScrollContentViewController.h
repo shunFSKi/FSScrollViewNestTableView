@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface FSScrollContentViewController : UIViewController
-
+@property (nonatomic, assign) BOOL vcCanScroll;
+@property (nonatomic, strong) UITableView *tableView;
 @end

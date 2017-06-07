@@ -18,20 +18,37 @@
 @property (nonatomic, strong) FSBaseTableView *tableView;
 @property (nonatomic, strong) FSBottomTableViewCell *contentCell;
 @property (nonatomic, strong) FSSegmentTitleView *titleView;
+@property (nonatomic, assign) BOOL canScroll;
 @end
 
 @implementation FSBaseViewController
 
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"tableView嵌套tableView手势Demo";
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeScrollStatus) name:@"leaveTop" object:nil];
+    
     self.view.backgroundColor = [UIColor whiteColor];
     [self setupSubViews];
 }
 
 - (void)setupSubViews
 {
+    self.canScroll = YES;
     self.tableView.backgroundColor = [UIColor whiteColor];
+}
+
+#pragma mark notify
+- (void)changeScrollStatus
+{
+    self.canScroll = YES;
+    self.contentCell.cellCanScroll = NO;
 }
 
 #pragma mark UITableView
@@ -89,6 +106,7 @@
                 vc.title = title;
                 [contentVCs addObject:vc];
             }
+            _contentCell.viewControllers = contentVCs;
             _contentCell.pageContentView = [[FSPageContentView alloc]initWithFrame:CGRectMake(0, 0, KSCREEN_WIDTH, KSCREEN_HEIGHT - 64) childVCs:contentVCs parentVC:self delegate:self];
             [_contentCell.contentView addSubview:_contentCell.pageContentView];
         }
@@ -114,11 +132,35 @@
 - (void)FSContenViewDidEndDecelerating:(FSPageContentView *)contentView startIndex:(NSInteger)startIndex endIndex:(NSInteger)endIndex
 {
     self.titleView.selectIndex = endIndex;
+    _tableView.scrollEnabled = YES;//此处其实是监测scrollview滚动，pageView滚动结束主tableview可以滑动，或者通过手势监听或者kvo，这里只是提供一种实现方式
 }
 
 - (void)FSSegmentTitleView:(FSSegmentTitleView *)titleView startIndex:(NSInteger)startIndex endIndex:(NSInteger)endIndex
 {
     self.contentCell.pageContentView.contentViewCurrentIndex = endIndex;
+}
+
+- (void)FSContentViewDidScroll:(FSPageContentView *)contentView startIndex:(NSInteger)startIndex endIndex:(NSInteger)endIndex progress:(CGFloat)progress
+{
+    _tableView.scrollEnabled = NO;//pageView开始滚动主tableview禁止滑动
+}
+
+#pragma mark UIScrollView
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGFloat bottomCellOffset = [_tableView rectForSection:1].origin.y - 64;
+    if (scrollView.contentOffset.y >= bottomCellOffset) {
+        scrollView.contentOffset = CGPointMake(0, bottomCellOffset);
+        if (self.canScroll) {
+            self.canScroll = NO;
+            self.contentCell.cellCanScroll = YES;
+        }
+    }else{
+        if (!self.canScroll) {//子视图没到顶部
+            scrollView.contentOffset = CGPointMake(0, bottomCellOffset);
+        }
+    }
+    self.tableView.showsVerticalScrollIndicator = _canScroll?YES:NO;
 }
 
 #pragma mark LazyLoad
@@ -128,6 +170,7 @@
         _tableView = [[FSBaseTableView alloc]initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds)) style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
+        _tableView.bounces = NO;
         [self.view addSubview:_tableView];
     }
     return _tableView;

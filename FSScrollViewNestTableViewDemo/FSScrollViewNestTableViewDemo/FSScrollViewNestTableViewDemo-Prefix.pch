@@ -15,3 +15,4 @@
 #endif /* FSScrollViewNestTableViewDemo_Prefix_pch */
 #define KSCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define KSCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+#define DebugLog(s, ...) NSLog(@"%s(%d): %@", __FUNCTION__, __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__])
