@@ -7,12 +7,27 @@
 //
 
 #import "FSScrollContentViewController.h"
+#import <SVPullToRefresh.h>
+
+/**
+ * 随机数据
+ */
+#define RandomData [NSString stringWithFormat:@"随机数据---%d", arc4random_uniform(1000000)]
 
 @interface FSScrollContentViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, assign) BOOL fingerIsTouch;
+/** 用来显示的假数据 */
+@property (strong, nonatomic) NSMutableArray *data;
 @end
 
 @implementation FSScrollContentViewController
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSLog(@"---%@",self.title);
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,6 +43,40 @@
     _tableView.dataSource = self;
 //    _tableView.bounces = NO;
     [self.view addSubview:_tableView];
+    __weak typeof(self) weakSelf = self;
+    [self.tableView addInfiniteScrollingWithActionHandler:^{
+        [weakSelf insertRowAtBottom];
+    }];
+}
+
+- (void)insertRowAtTop
+{
+    for (int i = 0; i<5; i++) {
+        [self.data insertObject:RandomData atIndex:0];
+    }
+    __weak UITableView *tableView = self.tableView;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [tableView reloadData];
+    });
+}
+
+- (void)insertRowAtBottom
+{
+    for (int i = 0; i<5; i++) {
+        [self.data addObject:RandomData];
+    }
+    __weak UITableView *tableView = self.tableView;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [tableView reloadData];
+        [tableView.infiniteScrollingView stopAnimating];
+    });
+}
+
+#pragma mark Setter
+- (void)setIsRefresh:(BOOL)isRefresh
+{
+    _isRefresh = isRefresh;
+    [self insertRowAtTop];
 }
 
 #pragma mark UITableView
@@ -38,7 +87,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 100;
+    return self.data.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -52,7 +101,7 @@
     if (!cell) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
-    cell.textLabel.text = self.title;
+    cell.textLabel.text = [NSString stringWithFormat:@"%@--%@",self.title,self.data[indexPath.row]];
     return cell;
 }
 
@@ -93,6 +142,17 @@
     NSInteger g = arc4random() % 255;
     NSInteger b = arc4random() % 255;
     return [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1];
+}
+
+- (NSMutableArray *)data
+{
+    if (!_data) {
+        self.data = [NSMutableArray array];
+        for (int i = 0; i<5; i++) {
+            [self.data addObject:RandomData];
+        }
+    }
+    return _data;
 }
 
 @end

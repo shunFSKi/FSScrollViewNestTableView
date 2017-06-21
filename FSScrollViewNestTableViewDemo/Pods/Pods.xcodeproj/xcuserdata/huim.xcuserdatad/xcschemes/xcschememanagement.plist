@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SVPullToRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>YYText.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>05999C54E044A0C9B01C91B1B9F45178</key>
+		<key>5D40EC313705B14A836EEF68EF218DB9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BFBC0E0278BD9DCCA75B720E0ECD76BE</key>
+		<key>79D4F239DD3DA396C19CC295D8A42B21</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C4FA7CB316DF333C7E1CDB884D1E2A40</key>
+		<key>ABD7DFE6A3969E7AC254980632621B57</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DBBDC38A4B5702974574EA7A624E7136</key>
 		<dict>
 			<key>primary</key>
 			<true/>

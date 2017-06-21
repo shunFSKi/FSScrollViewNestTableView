@@ -13,6 +13,7 @@
 #import "FSScrollContentView.h"
 #import "FSScrollContentViewController.h"
 #import "FSBottomTableViewCell.h"
+#import <SVPullToRefresh.h>
 
 @interface FSBaseViewController ()<UITableViewDelegate,UITableViewDataSource,FSPageContentViewDelegate,FSSegmentTitleViewDelegate>
 @property (nonatomic, strong) FSBaseTableView *tableView;
@@ -35,6 +36,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeScrollStatus) name:@"leaveTop" object:nil];
     
     self.view.backgroundColor = [UIColor whiteColor];
+    self.automaticallyAdjustsScrollViewInsets = NO;
     [self setupSubViews];
 }
 
@@ -42,6 +44,18 @@
 {
     self.canScroll = YES;
     self.tableView.backgroundColor = [UIColor whiteColor];
+    __weak typeof(self) weakSelf = self;
+    [self.tableView addPullToRefreshWithActionHandler:^{
+        [weakSelf insertRowAtTop];
+    }];
+}
+
+- (void)insertRowAtTop
+{
+    NSArray *sortTitles = @[@"全部",@"服饰穿搭",@"生活百货",@"美食吃货",@"美容护理",@"母婴儿童",@"数码家电"];
+    self.contentCell.currentTagStr = sortTitles[self.titleView.selectIndex];
+    self.contentCell.isRefresh = YES;
+    [self.tableView.pullToRefreshView stopAnimating];
 }
 
 #pragma mark notify
@@ -170,7 +184,7 @@
         _tableView = [[FSBaseTableView alloc]initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds)) style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
-        _tableView.bounces = NO;
+//        _tableView.bounces = NO;
         [self.view addSubview:_tableView];
     }
     return _tableView;

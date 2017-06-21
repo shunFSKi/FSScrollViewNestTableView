@@ -2,16 +2,19 @@ PODS:
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
+  - SVPullToRefresh (0.4.1)
   - YYText (1.0.7)
 
 DEPENDENCIES:
   - SDWebImage (~> 3.0)
+  - SVPullToRefresh
   - YYText
 
 SPEC CHECKSUMS:
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  SVPullToRefresh: ba2e718695a43253d8bea6852d2960097dc15d8c
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: fde75d8a08b9537fa72e9b2fb5608a7bec73dce0
+PODFILE CHECKSUM: ea90acca8d3b1ea12f1477dffc9883b602a5b6e9
 
 COCOAPODS: 1.2.0

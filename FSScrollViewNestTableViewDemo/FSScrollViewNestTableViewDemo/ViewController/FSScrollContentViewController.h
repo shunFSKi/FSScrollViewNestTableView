@@ -11,4 +11,5 @@
 @interface FSScrollContentViewController : UIViewController
 @property (nonatomic, assign) BOOL vcCanScroll;
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, assign) BOOL isRefresh;
 @end

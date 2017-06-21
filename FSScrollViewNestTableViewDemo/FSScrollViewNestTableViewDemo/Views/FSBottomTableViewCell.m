@@ -37,4 +37,15 @@
         }
     }
 }
+
+- (void)setIsRefresh:(BOOL)isRefresh
+{
+    _isRefresh = isRefresh;
+    
+    for (FSScrollContentViewController *ctrl in self.viewControllers) {
+        if ([ctrl.title isEqualToString:self.currentTagStr]) {
+            ctrl.isRefresh = isRefresh;
+        }
+    }
+}
 @end

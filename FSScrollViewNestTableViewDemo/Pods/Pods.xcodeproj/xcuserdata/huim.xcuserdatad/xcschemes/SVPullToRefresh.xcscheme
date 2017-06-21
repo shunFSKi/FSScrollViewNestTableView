@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '5D40EC313705B14A836EEF68EF218DB9'
-               BlueprintName = 'Pods-FSScrollViewNestTableViewDemo'
+               BlueprintIdentifier = '79D4F239DD3DA396C19CC295D8A42B21'
+               BlueprintName = 'SVPullToRefresh'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-FSScrollViewNestTableViewDemo.a'>
+               BuildableName = 'libSVPullToRefresh.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
