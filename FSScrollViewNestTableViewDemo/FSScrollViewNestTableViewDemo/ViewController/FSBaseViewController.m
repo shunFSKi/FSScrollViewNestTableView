@@ -118,6 +118,7 @@
             for (NSString *title in titles) {
                 FSScrollContentViewController *vc = [[FSScrollContentViewController alloc]init];
                 vc.title = title;
+                vc.str = title;
                 [contentVCs addObject:vc];
             }
             _contentCell.viewControllers = contentVCs;

@@ -14,6 +14,11 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>SVPullToRefresh.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>YYText.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -27,12 +32,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>5D40EC313705B14A836EEF68EF218DB9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>79D4F239DD3DA396C19CC295D8A42B21</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ABD7DFE6A3969E7AC254980632621B57</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>BFBC0E0278BD9DCCA75B720E0ECD76BE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>C4FA7CB316DF333C7E1CDB884D1E2A40</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DBBDC38A4B5702974574EA7A624E7136</key>
 		<dict>
 			<key>primary</key>
 			<true/>

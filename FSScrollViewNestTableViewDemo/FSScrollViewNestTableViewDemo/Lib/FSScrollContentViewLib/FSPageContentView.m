@@ -8,13 +8,14 @@
 
 #import "FSPageContentView.h"
 
+#define IOS_VERSION ([[[UIDevice currentDevice] systemVersion] floatValue])
 static NSString *collectionCellIdentifier = @"collectionCellIdentifier";
 
 @interface FSPageContentView ()<UICollectionViewDelegate,UICollectionViewDataSource>
 
-@property (nonatomic, weak) UIViewController *parentVC;//父视图
+@property (nonatomic, strong) UIViewController *parentVC;//父视图
 @property (nonatomic, strong) NSArray *childsVCs;//子视图数组
-@property (nonatomic, strong) UICollectionView *collectionView;
+@property (nonatomic, weak) UICollectionView *collectionView;
 @property (nonatomic, assign) CGFloat startOffsetX;
 @property (nonatomic, assign) BOOL isSelectBtn;//是否是滑动
 
@@ -51,13 +52,15 @@ static NSString *collectionCellIdentifier = @"collectionCellIdentifier";
         flowLayout.minimumInteritemSpacing = 0;
         flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         
-        _collectionView = [[UICollectionView alloc]initWithFrame:self.bounds collectionViewLayout:flowLayout];
-        _collectionView.showsHorizontalScrollIndicator = NO;
-        _collectionView.pagingEnabled = YES;
-        _collectionView.bounces = NO;
-        _collectionView.delegate = self;
-        _collectionView.dataSource = self;
-        [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:collectionCellIdentifier];
+        UICollectionView * collectionView = [[UICollectionView alloc]initWithFrame:self.bounds collectionViewLayout:flowLayout];
+        collectionView.showsHorizontalScrollIndicator = NO;
+        collectionView.pagingEnabled = YES;
+        collectionView.bounces = NO;
+        collectionView.delegate = self;
+        collectionView.dataSource = self;
+        [collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:collectionCellIdentifier];
+        [self addSubview:collectionView];
+        self.collectionView = collectionView;
     }
     return _collectionView;
 }
@@ -72,7 +75,8 @@ static NSString *collectionCellIdentifier = @"collectionCellIdentifier";
     for (UIViewController *childVC in self.childsVCs) {
         [self.parentVC addChildViewController:childVC];
     }
-    [self addSubview:self.collectionView];
+//    [self addSubview:self.collectionView];
+    [self.collectionView reloadData];
 }
 
 #pragma mark UICollectionView
@@ -85,13 +89,23 @@ static NSString *collectionCellIdentifier = @"collectionCellIdentifier";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:collectionCellIdentifier forIndexPath:indexPath];
-    [cell.contentView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
-    
-    UIViewController *childVC = self.childsVCs[indexPath.item];
-    childVC.view.frame = cell.contentView.bounds;
-    [cell.contentView addSubview:childVC.view];
+    if (IOS_VERSION < 8.0) {
+        [cell.contentView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+        UIViewController *childVC = self.childsVCs[indexPath.item];
+        childVC.view.frame = cell.contentView.bounds;
+        [cell.contentView addSubview:childVC.view];
+    }
     return cell;
 }
+
+#ifdef __IPHONE_8_0
+- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath{
+    [cell.contentView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    UIViewController *childVc = self.childsVCs[indexPath.row];
+    childVc.view.frame = cell.contentView.bounds;
+    [cell.contentView addSubview:childVc.view];
+}
+#endif
 
 #pragma mark UIScrollView
 
